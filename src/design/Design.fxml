@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?language javascript?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="834.9999000000025" style="-fx-background-image: url('./back.png');" xmlns:fx="http://javafx.com/fxml" fx:controller="design.Design1Controller">
+  <children>
+    <SplitPane focusTraversable="true" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <SplitPane focusTraversable="true" prefHeight="329.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-image: url('back.png');">
+                  <children>
+                    <Label layoutX="207.0" layoutY="162.0" text="Manual Sequence" />
+                    <TextField fx:id="tfSequence" layoutX="207.0" layoutY="190.0" prefHeight="37.0" prefWidth="206.0" style="-fx-background-image: url('back.png');" />
+                    <Label id="result" fx:id="sum" layoutX="319.0" layoutY="384.0" prefWidth="125.0" />
+                    <Button fx:id="button" layoutX="456.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="37.0" prefWidth="117.0" text="Calculate!" />
+                    <Label layoutX="238.0" layoutY="384.0" text="Sum" />
+                    <Label id="result" fx:id="subSequence" layoutX="335.0" layoutY="415.0" prefWidth="109.0" />
+                    <Label id="subSeqOrN" layoutX="238.0" layoutY="415.0" text="Subsequence" />
+                    <Label id="result" fx:id="efficiency" layoutX="319.0" layoutY="445.0" prefWidth="125.0" />
+                    <Label layoutX="238.0" layoutY="443.0" text="Efficiency" />
+                    <BarChart fx:id="bChart" layoutX="436.0" layoutY="279.0" prefHeight="229.0" prefWidth="289.0">
+                      <xAxis>
+                        <CategoryAxis side="BOTTOM">
+                          <categories>
+                            <FXCollections fx:factory="observableArrayList" />
+                          </categories>
+                        </CategoryAxis>
+                      </xAxis>
+                      <yAxis>
+                        <NumberAxis side="LEFT" />
+                      </yAxis>
+                    </BarChart>
+                    <ProgressBar fx:id="pBar" layoutX="315.0" layoutY="137.0" opacity="0.57" prefWidth="200.0" progress="0.0" visible="false" />
+                    <Label id="result" fx:id="time" layoutX="317.0" layoutY="473.0" prefWidth="125.0" />
+                    <Label id="time" layoutX="238.0" layoutY="471.0" text="Time" />
+                    <Button id="button" fx:id="randomGen" layoutX="207.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleRandomButtonAction" prefHeight="37.0" prefWidth="203.0" text="Generate and Calculate!" />
+                    <Label layoutX="207.0" layoutY="243.0" text="Random Sized Sequence" />
+                    <Label id="result" fx:id="seqSize" layoutX="319.0" layoutY="358.0" prefWidth="125.0" />
+                    <Label layoutX="238.0" layoutY="358.0" text="N" />
+                    <ChoiceBox layoutX="628.0" layoutY="198.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="Item 1" />
+                          <String fx:value="Item 2" />
+                          <String fx:value="Item 3" />
+                        </FXCollections>
+                      </items>
+                    </ChoiceBox>
+                    <MenuBar layoutY="98.0" minHeight="30.0" prefHeight="37.0" prefWidth="831.0" style="-fx-font-size: 18px;">
+                      <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Close" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Delete" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="About" />
+                          </items>
+                        </Menu>
+                      </menus>
+                    </MenuBar>
+                    <AnchorPane prefHeight="98.0" prefWidth="831.0" />
+                  </children>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>

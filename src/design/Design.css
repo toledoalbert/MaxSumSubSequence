@@ -1,0 +1,13 @@
+/* 
+    Document   : Design
+    Created on : Feb 19, 2013, 1:02:57 PM
+    Author     : toledoalbert
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+    /*-fx-background-image: url('yelken.png');*/
+}
+

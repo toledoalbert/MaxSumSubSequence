@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?language javascript?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="643.0" prefWidth="844.0" style="-fx-background-color: linear-gradient(#000938 , #1d1b4c);" styleClass="body" xmlns:fx="http://javafx.com/fxml" fx:controller="design.Design1Controller">
+  <children>
+    <ImageView fitHeight="643.0" fitWidth="1028.800014648438" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../background.jpg" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <Text fx:id="name" layoutX="198.0" layoutY="89.0" scaleX="3.8486331791690236" scaleY="4.27155616423815" stroke="GREY" strokeType="INSIDE" strokeWidth="0.1" style="-fx-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="MaxSumSub">
+      <font>
+        <Font name="MyriadPro-BoldCond" size="20.0" />
+      </font>
+    </Text>
+    <Text fx:id="description" layoutX="35.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(#ff7c00 , #7246b6);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="a Maximum Sum Subsequence Calculator">
+      <fill>
+        <Color blue="0.200" green="0.969" red="1.000" fx:id="x7" />
+      </fill>
+      <font>
+        <Font name="Apple Chancery" size="17.0" fx:id="x8" />
+      </font>
+    </Text>
+    <AnchorPane id="AnchorPane" fx:id="randomPane" layoutX="35.0" layoutY="130.0" prefHeight="231.0" prefWidth="695.0" visible="false">
+      <children>
+        <Text layoutX="214.0" layoutY="97.0" scaleX="2.4631604375884324" scaleY="2.513043755581069" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="when calculating the maximum sum, using the choicebox.">
+          <fill>
+            <Color blue="0.624" green="0.624" red="0.624" fx:id="x4" />
+          </fill>
+          <font>
+            <Font size="10.0" fx:id="x5" />
+          </font>
+        </Text>
+        <Text fill="$x4" font="$x5" layoutX="185.0" layoutY="24.0" scaleX="2.4631604375884324" scaleY="2.513043755581069" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="Please choose a size for the sequence that will be " />
+        <Button id="button" layoutX="7.0" layoutY="188.0" mnemonicParsing="false" onAction="#handleRandomButtonAction" prefHeight="43.0" prefWidth="301.0" style="-fx-background-color: &#10;        #090a0c,&#10;        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),&#10;        linear-gradient(#20262b, #191d22),&#10;        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));&#10;    -fx-background-radius: 5,4,3,5;&#10;    -fx-background-insets: 0,1,2,0;&#10;    -fx-text-fill: white;&#10;    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );&#10;    -fx-font-family: &quot;Arial&quot;;&#10;    -fx-text-fill: linear-gradient(white, #d0d0d0);&#10;    -fx-font-size: 20px;&#10;    -fx-padding: 2 2 2 2;" text="Generate and Calculate!">
+          <font>
+            <Font size="21.0" fx:id="x2" />
+          </font>
+          <textFill>
+            <Color blue="0.251" green="0.251" red="0.251" fx:id="x14" />
+          </textFill>
+        </Button>
+        <HBox id="HBox" fx:id="randomSettings" alignment="CENTER" layoutX="7.0" layoutY="139.0" spacing="5.0">
+          <children>
+            <Slider fx:id="sliderSize" max="10000.0" prefWidth="303.0" />
+            <Label text="N =">
+              <font>
+                <Font size="20.0" fx:id="x3" />
+              </font>
+              <textFill>
+                <Color blue="0.875" green="0.875" red="0.875" fx:id="x1" />
+              </textFill>
+            </Label>
+            <Label fx:id="randomSize" font="$x3" text="0" textFill="$x1" />
+          </children>
+        </HBox>
+        <Text fill="$x4" font="$x5" layoutX="208.0" layoutY="60.0" scaleX="2.4631604375884324" scaleY="2.513043755581069" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="generated randomly and choose an efficiency to be used" />
+        <ChoiceBox id="selectEfficiency" fx:id="selectEfficiency2" layoutX="437.0" layoutY="134.0" style="-fx-background-color: &#10;        #090a0c,&#10;        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),&#10;        linear-gradient(#20262b, #191d22),&#10;        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));&#10;    -fx-background-radius: 5,4,3,5;&#10;    -fx-background-insets: 0,1,2,0;&#10;    -fx-text-fill: white;&#10;    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );&#10;    -fx-font-family: &quot;Arial&quot;;&#10;    -fx-text-fill: linear-gradient(white, #d0d0d0);&#10;    -fx-font-size: 12px;&#10;    -fx-padding: 10 20 10 20;">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Compare All" />
+              <String fx:value="N" />
+              <String fx:value="N Square" />
+              <String fx:value="N Cube" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+      </children>
+    </AnchorPane>
+    <AnchorPane id="AnchorPane" fx:id="manualPane" layoutX="37.0" layoutY="137.0" prefHeight="187.0" prefWidth="877.800048828125" visible="false">
+      <children>
+        <Text fill="$x4" font="$x5" layoutX="214.0" layoutY="55.0" scaleX="2.4631604375884324" scaleY="2.513043755581069" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="choose an efficiency and click Calculate! button  to calculate" />
+        <Text fill="$x4" font="$x5" layoutX="153.0" layoutY="92.0" scaleX="2.4631604375884324" scaleY="2.513043755581069" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="the subsequence  with the maximum sum." />
+        <TextField fx:id="tfSequence" layoutY="141.0" prefHeight="43.0" prefWidth="277.0" promptText="Enter Sequence" style="-fx-background-color: #c5c5c5;&#10;-fx-effect: innershadow( gaussian , gray , 2, 0.4 , 2 , 2 );&#10;-fx-font-size: 22px;" />
+        <ChoiceBox fx:id="selectEfficiency" layoutX="360.0" layoutY="145.0" style="-fx-background-color: &#10;        #090a0c,&#10;        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),&#10;        linear-gradient(#20262b, #191d22),&#10;        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));&#10;    -fx-background-radius: 5,4,3,5;&#10;    -fx-background-insets: 0,1,2,0;&#10;    -fx-text-fill: white;&#10;    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );&#10;    -fx-font-family: &quot;Arial&quot;;&#10;    -fx-text-fill: linear-gradient(white, #d0d0d0);&#10;    -fx-font-size: 12px;&#10;    -fx-padding: 10 20 10 20;">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Compare All" />
+              <String fx:value="N" />
+              <String fx:value="N Square" />
+              <String fx:value="N Cube" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+        <Button fx:id="button" font="$x2" layoutX="584.0" layoutY="141.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="43.0" prefWidth="137.0" style="-fx-background-color: &#10;        #090a0c,&#10;        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),&#10;        linear-gradient(#20262b, #191d22),&#10;        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));&#10;    -fx-background-radius: 5,4,3,5;&#10;    -fx-background-insets: 0,1,2,0;&#10;    -fx-text-fill: white;&#10;    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );&#10;    -fx-font-family: &quot;Arial&quot;;&#10;    -fx-text-fill: linear-gradient(white, #d0d0d0);&#10;    -fx-font-size: 20px;&#10;    -fx-padding: 2 2 2 2;" text="Calculate!" />
+        <Text fill="$x4" font="$x5" layoutX="224.0" layoutY="19.0" scaleX="2.4631604375884324" scaleY="2.513043755581069" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="Please enter a sequence of numbers seperated with commas (,)" />
+      </children>
+    </AnchorPane>
+    <HBox id="HBox" fx:id="menu" alignment="CENTER" layoutX="503.0" layoutY="65.0" spacing="5.0">
+      <children>
+        <Button mnemonicParsing="false" onAction="#goManual" style="-fx-background-color: linear-gradient(#ff5400, #be1d00);&#10;    -fx-background-radius: 30;&#10;    -fx-background-insets: 0;&#10;    -fx-text-fill: white;" text="Manual" />
+        <Button mnemonicParsing="false" onAction="#goRandom" style="-fx-background-color: linear-gradient(#ff5400, #be1d00);&#10;    -fx-background-radius: 30;&#10;    -fx-background-insets: 0;&#10;    -fx-text-fill: white;" text="Random" />
+      </children>
+    </HBox>
+    <AnchorPane id="welcome" fx:id="welcomePane" layoutX="47.0" layoutY="137.0" prefHeight="470.0" prefWidth="729.0" visible="false">
+      <children>
+        <Button layoutX="260.0" layoutY="323.0" mnemonicParsing="false" onAction="#goRandom" prefHeight="60.999900000002526" prefWidth="229.0" style="-fx-background-color: linear-gradient(#ff5400, #be1d00);&#10;    -fx-background-radius: 30;&#10;    -fx-background-insets: 0;&#10;    -fx-text-fill: white;" text="Randomly">
+          <font>
+            <Font size="30.0" fx:id="x9" />
+          </font>
+        </Button>
+        <Text id="name" layoutX="273.0" layoutY="61.0" scaleX="3.8486331791690236" scaleY="4.27155616423815" stroke="GREY" strokeType="INSIDE" strokeWidth="0.1" style="//-fx-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="Welcome to MaxSumSub application.">
+          <fill>
+            <Color blue="1.000" green="0.800" red="0.816" fx:id="x11" />
+          </fill>
+          <font>
+            <Font name="MyriadPro-Regular" size="13.0" />
+          </font>
+        </Text>
+        <Text id="description" fill="$x11" layoutX="-34.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" style="//-fx-fill: linear-gradient(#ff7c00 , #7246b6);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="This application allows you to find the subsequence with the maximum sum given a ">
+          <font>
+            <Font name="Apple Chancery" size="23.0" fx:id="x10" />
+          </font>
+        </Text>
+        <Button font="$x9" layoutX="260.0" layoutY="192.0" mnemonicParsing="false" onAction="#goManual" prefHeight="61.0" prefWidth="229.0" style="-fx-background-color: linear-gradient(#ff5400, #be1d00);&#10;    -fx-background-radius: 30;&#10;    -fx-background-insets: 0;&#10;    -fx-text-fill: white;" text="Manually" />
+        <Text id="description" fill="$x11" font="$x10" layoutX="70.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" style="//-fx-fill: linear-gradient(#ff7c00 , #7246b6);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="sequence of negative or positive numbers. Sequence can be generated" />
+        <Text id="description" fill="$x11" layoutX="364.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" style="//-fx-fill: linear-gradient(#ff7c00 , #7246b6);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="or">
+          <font>
+            <Font name="Apple Chancery" size="30.0" />
+          </font>
+        </Text>
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="results" layoutX="35.0" layoutY="363.0" prefHeight="247.0" prefWidth="876.0">
+      <children>
+        <Label fx:id="seqSize" layoutX="436.0" layoutY="49.0" prefHeight="36.0" prefWidth="349.0" style="&#10;-fx-text-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="" visible="true">
+          <font>
+            <Font name="MyriadPro-Semibold" size="60.0" />
+          </font>
+          <textFill>
+            <Color blue="0.250" green="0.250" red="0.250" fx:id="x6" />
+          </textFill>
+        </Label>
+        <Label id="seqSize" fx:id="sum" layoutX="438.0" layoutY="147.0" prefHeight="60.0" prefWidth="424.0" style="&#10;-fx-text-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="" textFill="$x6" visible="true">
+          <font>
+            <Font name="MyriadPro-Semibold" size="50.0" fx:id="x12" />
+          </font>
+        </Label>
+        <Label layoutX="438.0" layoutY="124.0" minHeight="21.0" prefHeight="21.0" style="-fx-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="Sum" textFill="$x1" visible="true">
+          <font>
+            <Font name="MyriadPro-Semibold" size="17.0" fx:id="x13" />
+          </font>
+        </Label>
+        <Label font="$x13" layoutX="583.0" layoutY="26.0" minHeight="21.0" prefHeight="21.0" style="-fx-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="Efficiency" textFill="#dfdfdf" visible="true" />
+        <Label id="seqSize" fx:id="efficiency" font="$x12" layoutX="583.0" layoutY="56.0" prefHeight="60.0" prefWidth="404.0" style="&#10;-fx-text-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="" textFill="$x14" visible="true" />
+        <Label fx:id="time" layoutX="7.0" layoutY="47.0" minHeight="52.0" prefHeight="197.0" prefWidth="404.0" style="&#10;-fx-text-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="" textFill="$x6" visible="true">
+          <font>
+            <Font name="MyriadPro-Semibold" size="120.0" />
+          </font>
+        </Label>
+        <Label font="$x13" layoutX="20.0" layoutY="34.0" minHeight="21.0" prefHeight="21.0" style="-fx-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="Best Time" textFill="$x1" visible="true" />
+        <Label layoutX="296.0" layoutY="17.0" style="-fx-font-size: 20px;" text="Subsequence" textFill="$x1" visible="false" />
+        <Label fx:id="subSequence" layoutX="330.0" layoutY="56.0" prefWidth="16.0" style="-fx-font-size: 20px;&#10;-fx-background-color: #c5c5c5;&#10;-fx-effect: innershadow( gaussian , gray , 2, 0.4 , 2 , 2 );" textFill="$x1" visible="false" />
+        <BarChart fx:id="chart" layoutX="391.0" prefHeight="247.0" prefWidth="335.0" visible="false">
+          <xAxis>
+            <CategoryAxis side="BOTTOM">
+              <categories>
+                <FXCollections fx:factory="observableArrayList" />
+              </categories>
+            </CategoryAxis>
+          </xAxis>
+          <yAxis>
+            <NumberAxis side="LEFT" />
+          </yAxis>
+        </BarChart>
+        <Label font="$x13" layoutX="438.0" layoutY="28.0" minHeight="21.0" prefHeight="21.0" style="-fx-fill: linear-gradient(#ffffff, #8c8c8c);&#10;-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 0.2, 0.0 , 0 , 1 );" text="N" textFill="$x1" visible="true" />
+      </children>
+    </AnchorPane>
+    <ImageView fx:id="close" fitHeight="30.0" fitWidth="30.0" layoutX="800.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../close.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <Separator layoutX="21.0" layoutY="108.0" prefWidth="779.0" style="-fx-color: white;" />
+  </children>
+  <stylesheets>
+    <URL value="@Design.css" />
+  </stylesheets>
+</AnchorPane>
